@@ -1,16 +1,14 @@
-#include<iostream>
+#include<stdio.h>
 #include<math.h>
 #define e 0.001
 #define f(x) x*x*x - 4*x + 1
-
-using namespace std;
 
 int main(){
 	int i = 0;
 	float x0, x1, x2, f0, f1, f2;
 	
-	cout<<"Enter the values of x0 and x1:";
-	cin>>x0>>x1;
+	printf("Enter the values of x0 and x1:);
+	scanf("%f%f",&x0,&x1);
 	
 	do{
 		f0 = f(x0);
@@ -24,9 +22,9 @@ int main(){
 		x0 = x1;
 		x1 = x2;
 		i++;
-		cout<<"No. of Iteration= %d\t"<<i;
-		cout<<"Root = %f\t"<<x2;
-		cout<<"Value of Function= %f\n"<<f2;
+		printf("No. of Iteration= %d\t",i);
+		printf("Root = %f\t",x2);
+		printf("Value of Function= %f\n",f2);
 	}while(fabs(x2) > e);
 	return 0;
 }
